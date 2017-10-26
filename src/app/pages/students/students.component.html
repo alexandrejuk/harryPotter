@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="text-center">
+    <img class="logo" src="assets/img/logo.png" alt="">
+  </div>
+  <div class="row">
+    <div class="col-3" *ngFor="let student of students">
+
+      <div class="card panel">
+        <img src="{{student?.image}}" alt="">
+        <div class="content">
+          <h6>{{ student?.name }}</h6>
+          <p><small><strong><i class="fa fa-university" aria-hidden="true"></i> {{ student?.house }}</strong></small> -
+            <small><strong><i class="fa fa-pagelines" aria-hidden="true"></i> {{ student?.ancestry }}</strong></small></p>
+          <p><small><i class="fa fa-bolt" aria-hidden="true"></i>  {{ student?.patronus  }}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
