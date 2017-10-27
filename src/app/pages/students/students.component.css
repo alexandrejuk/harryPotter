@@ -27,7 +27,7 @@ p {
   margin: 20px;
   padding: 10px;
   width: 225px !important;
-  height: 300px !important;
+  height: 320px !important;
 }
 img {
   width: 200px !important;
@@ -38,8 +38,4 @@ i {
 }
 .fa-university {
   font-size: 0.8em;
-}
-.logo {
-  width: auto !important;
-  height: 150px !important;
 }

@@ -1,6 +1,7 @@
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 import { StudentsService } from './../../providers/students/students.service';
 import { Student } from './../../models/students.interface';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-students',
@@ -9,22 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentsComponent implements OnInit {
 
-  public students: Student[];
+  public students$: Observable<Student[]>;
 
   constructor(private studentsService: StudentsService) {}
 
   ngOnInit() {
-    this.getStudents();
+    this.students$ = this.studentsService.getAllStudents();
   }
 
-  getStudents() {
-    this.studentsService.getAllStudents().subscribe(data => {
-        const response = (data as any);
-        const object = JSON.parse(response._body);
-        console.log(object);
-        this.students = object;
-      }, error => {
-        console.log(error);
-      });
-  }
 }
