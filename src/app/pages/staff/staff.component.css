@@ -1,0 +1,41 @@
+.panel {
+  border: 5px 0px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  transition: box-shadow 0.5s;
+}
+h5 {
+  font-size: 18px;
+}
+.panel:hover {
+  box-shadow: 5px 0px 40px rgba(0, 0, 0, 0.2);
+}
+.name-student {
+  color: #909090;
+}
+card-title {
+  color: #181818;
+}
+.info {
+  font-size: 13px;
+  color: #909090;
+}
+p {
+  margin: 0;
+}
+.card {
+  font-size: 13px;
+  margin: 20px;
+  padding: 10px;
+  width: 225px !important;
+  height: 320px !important;
+}
+img {
+  width: 200px !important;
+  height: 230px !important;
+}
+i {
+  font-size: 1em;
+}
+.fa-university {
+  font-size: 0.8em;
+}

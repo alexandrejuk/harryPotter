@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { StudentsService } from './../../providers/students/students.service';
-import { Student } from './../../models/students.interface';
+import { Character } from './../../models/character.interface';
 
 @Component({
   selector: 'app-students',
@@ -10,7 +10,7 @@ import { Student } from './../../models/students.interface';
 })
 export class StudentsComponent implements OnInit {
 
-  public students$: Observable<Student[]>;
+  public students$: Observable<Character[]>;
 
   constructor(private studentsService: StudentsService) {}
 

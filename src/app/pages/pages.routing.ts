@@ -10,6 +10,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'students', pathMatch: 'full' },
       { path: 'students', loadChildren: './students/students.module#StudentsModule' },
+      { path: 'staff', loadChildren: './staff/staff.module#StaffModule' },
     ]
   }
 ];

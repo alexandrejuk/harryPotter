@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-3" *ngFor="let s of staff$ | async">
+
+    <div class="card panel">
+      <img src="{{s?.image}}" alt="">
+      <div class="content mt-2">
+        <h6>{{ s?.name }}</h6>
+        <p><small><strong><i class="fa fa-university" aria-hidden="true"></i> {{ s?.house }}</strong></small> -
+          <small><strong><i class="fa fa-pagelines" aria-hidden="true"></i> {{ s?.ancestry }}</strong></small></p>
+        <p><small><i class="fa fa-bolt" aria-hidden="true"></i>  {{ s?.patronus  }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+

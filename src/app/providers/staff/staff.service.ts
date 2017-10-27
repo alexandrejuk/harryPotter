@@ -4,16 +4,16 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class StudentsService {
-
+export class StaffService {
   private url = 'http://localhost:3000/characters';
 
   constructor(private _http: Http) {}
 
-  getAllStudents() {
-   return this._http
+  getAllStaff() {
+    return this._http
       .get(this.url)
-      .map(students => students.json()
-         .filter(student => student.hogwartsStudent === true));
+      .map(students =>
+        students.json().filter(student => student.hogwartsStaff === true)
+      );
   }
 }
